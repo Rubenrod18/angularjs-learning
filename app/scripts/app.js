@@ -1,7 +1,6 @@
 /*global angular*/
 (function () {
     'use strict';
-
     /**
      * @ngdoc overview
      * @name stockDogApp
@@ -24,16 +23,16 @@
             $routeProvider
                 .when('/dashboard', {
                     templateUrl: 'views/dashboard.html',
-                    controller: 'DashboardCtrl',
-                    controllerAs: 'dashboard'
+                    controller: 'DashboardCtrl'
+                    //controllerAs: 'dashboard'
                 })
                 .when('/watchlist/:listId', {
                     templateUrl: 'views/watchlist.html',
-                    controller: 'WatchlistCtrl',
-                    controllerAs: 'watchlist'
+                    controller: 'WatchlistCtrl'
+                    //controllerAs: 'watchlist'
                 })
                 .otherwise({
                     redirectTo: '/dashboard'
                 });
-        });
+        }); // config
 }());
