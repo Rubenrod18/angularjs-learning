@@ -13,6 +13,9 @@
                     // [2] Initialize variables
                     $scope.watchlist = {};
                     $scope.currentList = $routeParams.listId;
+                    $scope.gotoList = function (listId) {
+                        $location.path('watchlist/' + listId);
+                    };
                     var addListModal = $modal({
                         scope: $scope,
                         templateUrl: 'views/templates/addlist-modal.html',

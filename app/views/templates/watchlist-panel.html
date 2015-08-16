@@ -3,7 +3,8 @@
         <span class="glyphicon glyphicon-eye-open"></span>
         Watchlists
         <!--[1] Invoke showModal() handler on click -->
-        <button type="button" class="btn btn-success btn-xs pull-right" ng-click="showModal()">
+        <button type="button" class="btn btn-success btn-xs pull-right"
+            ng-click="showModal()">
             <span class="glyphicon glyphicon-plus"></span>
         </button>
     </div>
@@ -14,10 +15,14 @@
         </div>
         <div class="list-group">
             <!-- [3] Repeat over each list in watchlists and create link -->
-            <a class="list-group-item" ng-repeat="list in watchlists track by $index">
+            <a class="list-group-item"
+                ng-class="{active: currentList == list.id}"
+                ng-repeat="list in watchlists track by $index"
+                ng-click="gotoList(list.id)">
                 {{list.name}}
                 <!-- [4] Delete this list by invoking deleteList() handler -->
-                <button type="button" class="close" ng-click="deleteList(list)"> &times;</button>
+                <button type="button" class="close"
+                    ng-click="deleteList(list)"> &times;</button>
             </a>
         </div>
     </div>

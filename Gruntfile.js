@@ -60,8 +60,9 @@ module.exports = function (grunt) {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          //'<%= yeoman.app %>/{,*/}*.html',
-          // This change enable to GRUNT reload the app when we any html file
+          '<%= yeoman.app %>/{,*/}*.html',
+          // This change enable to GRUNT reload the app when
+          // we any html file inside any foder inside views
           '<%= yeoman.app %>/**/*.html',
           '.tmp/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'

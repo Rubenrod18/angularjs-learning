@@ -22,8 +22,18 @@
         ])
         .config(function ($routeProvider) {
             $routeProvider
+                .when('/dashboard', {
+                    templateUrl: 'views/dashboard.html',
+                    controller: 'DashboardCtrl',
+                    controllerAs: 'dashboard'
+                })
+                .when('/watchlist/:listId', {
+                    templateUrl: 'views/watchlist.html',
+                    controller: 'WatchlistCtrl',
+                    controllerAs: 'watchlist'
+                })
                 .otherwise({
-                    redirectTo: '/'
+                    redirectTo: '/dashboard'
                 });
         });
 }());
