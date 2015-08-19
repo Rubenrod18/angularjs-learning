@@ -1,4 +1,4 @@
-/*global angular, quotes*/
+/*global angular*/
 (function () {
     'use strict';
     /**

@@ -24,7 +24,8 @@
                     </p>
                 </div>
                 <!-- [1] loop over all stocks and display company symbols -->
-                <p ng-repeat="stock in stocks">{{stock.company.symbol}}</p>
+                <!--<p ng-repeat="stock in stocks">{{stock.company.symbol}}</p>-->
+                <stk-stock-table ng-show="stocks.length" watchlist="watchlist">
             </div>
         </div>
     </div>
